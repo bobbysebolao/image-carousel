@@ -1,42 +1,28 @@
+
+html {
+background-color: #c18e67;
+
+}
+
 .image-carousel {
   display: flex;
   flex-direction: column;
   width: 100%;
   max-width: 750px;
+  margin: 0 auto;
   height: auto;
 }
 
 #carousel-container {
-/*   perspective: 1000px; */
-  /* border: 2px solid red; */
-  /* position: relative; */
   width: 100%;
-  /* height: auto; */
-  /* top: 50%;
-  left: 100px; */
-  /* height: 400px; */
-  /* width: 80%; */
-  /* padding-top: 150px; */
-  /* display: flex;
-  flex-direction: row;
-  justify-content: center; */
-/*   padding: 5px; */
   }
 
 #carouselImages {
-/*   transform: rotateY(-50deg); */
-  /* border: 2px solid yellow; */
-  /* height: 400px; */
   width: 100%;
-  /* height: auto; */
-  /* order:2; */
-  /* flex-grow: 1; */
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  /* justify-content: space-between; */
   overflow: hidden;
-  /*   margin: 5px; */
   }
 
   .img1, .img2, .img3 {
@@ -153,11 +139,6 @@
 /*CAROUSEL 'SKIP TO' BUTTONS*/
 
 #carouselButtons {
-  /* border: 2px solid pink; */
-  /* height: 20px;
-  width: 750px; */
-  /* width: 80%; */
-  /* margin-top: 5px; */
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -167,15 +148,11 @@
 #arrL-carousel {
   width: 40%;
   order: 1;
-  /* flex-shrink: 1;
-  flex-grow: 9; */
   }
 
 #shuffleButtons {
   width: 20%;
   order: 2;
-  /* flex-shrink: 9;
-  flex-grow: 1; */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -196,8 +173,6 @@
 #arrR-carousel {
   width: 40%;
   order: 3;
-  /* flex-shrink: 1;
-  flex-grow: 9; */
   }
 
   #leftButton, #rightButton {
