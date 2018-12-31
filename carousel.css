@@ -1,0 +1,253 @@
+.image-carousel {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 750px;
+  height: auto;
+}
+
+#carousel-container {
+/*   perspective: 1000px; */
+  /* border: 2px solid red; */
+  /* position: relative; */
+  width: 100%;
+  /* height: auto; */
+  /* top: 50%;
+  left: 100px; */
+  /* height: 400px; */
+  /* width: 80%; */
+  /* padding-top: 150px; */
+  /* display: flex;
+  flex-direction: row;
+  justify-content: center; */
+/*   padding: 5px; */
+  }
+
+#carouselImages {
+/*   transform: rotateY(-50deg); */
+  /* border: 2px solid yellow; */
+  /* height: 400px; */
+  width: 100%;
+  /* height: auto; */
+  /* order:2; */
+  /* flex-grow: 1; */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  /* justify-content: space-between; */
+  overflow: hidden;
+  /*   margin: 5px; */
+  }
+
+  .img1, .img2, .img3 {
+    object-fit: contain;
+    object-position: center center;
+    background-color: rgba(47, 47, 47, 0.3);
+    width: 100%;
+  }
+
+.position1 {
+  position: relative;
+  order: 1;
+}
+
+.position2 {
+  position: relative;
+  order: 2;
+}
+
+.position3 {
+  position: relative;
+  order: 3;
+}
+
+.positionMinus1 {
+  position: relative;
+  order: -1;
+}
+
+.positionMinus1Offset {
+  position: relative;
+  left: -100%;
+  order: -1;
+}
+
+.position1Offset {
+  position: relative;
+  left: -100%;
+  order: 1;
+}
+
+.position1DoubleOffset {
+  position: relative;
+  left: -200%;
+  order: 1;
+}
+
+.animate {
+  animation: moveImageLeft1 0.5s linear;
+  animation-fill-mode: forwards;
+}
+
+.animate2 {
+  animation: moveImageLeft2 0.5s linear ;
+  animation-fill-mode: forwards;
+}
+
+.animate3 {
+  animation: moveImageLeft3 0.5s linear ;
+  animation-fill-mode: forwards;
+}
+
+@keyframes moveImageLeft1 {
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes moveImageLeft2 {
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes moveImageLeft3 {
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.animateRight {
+  animation: moveImageRight1 0.5s linear ;
+  animation-fill-mode: forwards;
+}
+
+.animateRight2 {
+  animation: moveImageRight2 0.5s linear ;
+  animation-fill-mode: forwards;
+}
+
+.animateRight3 {
+  animation: moveImageRight3 0.5s linear ;
+  animation-fill-mode: forwards;
+}
+
+@keyframes moveImageRight1 {
+  to {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes moveImageRight2 {
+  to {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes moveImageRight3 {
+  to {
+    transform: translateX(100%);
+  }
+}
+
+/*CAROUSEL 'SKIP TO' BUTTONS*/
+
+#carouselButtons {
+  /* border: 2px solid pink; */
+  /* height: 20px;
+  width: 750px; */
+  /* width: 80%; */
+  /* margin-top: 5px; */
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  }
+
+#arrL-carousel {
+  width: 40%;
+  order: 1;
+  /* flex-shrink: 1;
+  flex-grow: 9; */
+  }
+
+#shuffleButtons {
+  width: 20%;
+  order: 2;
+  /* flex-shrink: 9;
+  flex-grow: 1; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #fdfdfd;
+  opacity: 0.8;
+  transition: all 0.25s ease;
+}
+
+#shuffleButtons:hover {
+  opacity: 1;
+}
+
+#shuffleButtons.active {
+  opacity: 1;
+}
+
+#arrR-carousel {
+  width: 40%;
+  order: 3;
+  /* flex-shrink: 1;
+  flex-grow: 9; */
+  }
+
+  #leftButton, #rightButton {
+    background-color: #fdfdfd;
+    font-size: 2em;
+    color: #2f2f2f;
+    width: 100%;
+    height: 3em;
+    opacity: 0.5;
+    border: none;
+    transition: all 0.25s ease;
+  }
+
+  #leftButton:hover, #rightButton:hover {
+    background-color: #2f2f2f;
+    color: white;
+    cursor: pointer;
+  }
+
+  #leftButton:focus, #rightButton:focus {
+    outline:0;
+  }
+
+  #autoplay
+{
+    display: none;
+}
+
+#autoplay + label {
+    width: 100%;
+    height: 100%;
+    background: url(play.svg);
+    background-repeat: no-repeat;
+    background-attachment: cover;
+    background-position: center center;
+    cursor: pointer;
+    opacity: 0.5;
+}
+
+#autoplay:checked + label {
+    width: 100%;
+    height: 100%;
+    background: url(pause.svg);
+    background-repeat: no-repeat;
+    background-attachment: cover;
+    background-position: center center;
+    cursor: pointer;
+    opacity: 0.5;
+}
+
+.active #autoplay {
+  opacity: 1;
+}
